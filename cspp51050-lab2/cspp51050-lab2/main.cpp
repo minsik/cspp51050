@@ -7,30 +7,54 @@
 //
 
 #include <iostream>
+#include <cstdarg>
 #include "Client.h"
 #include "Broker.h"
 #include "ServerProxy.h"
 
-int clientQuery(){
+
+void query(int, int);
+void query(std::string);
+
+int main(int argc, const char * argv[])
+{
+    query(5,5);
+    query("this lab is hard");
+    
+    return 0;
+}
+
+void query(int x, int y){
     Broker clientBroker;
     Broker serverBroker;
     Client client;
     ClientProxy cProxy;
     ServerProxy sProxy;
+    client.query(x, y);
     cProxy.proxyToBroker(client.sendToProxy(cProxy), clientBroker);
     clientBroker.sendToBroker(serverBroker, clientBroker.getString());
     serverBroker.brokerToProxy(sProxy);
     serverBroker.sendToBroker(clientBroker, serverBroker.getString());
     clientBroker.brokerToProxy(cProxy);
-    std::cout<<"ANSWER:"<<client.getResult();
-    return stoi(client.getResult());
+    std::cout<<"Result:"<<client.getResult()<<std::endl;
 }
 
-int main(int argc, const char * argv[])
-{
-    clientQuery();
-//    clientQuery(std::string a, std::string b, std::string c);
+void query(std::string x){
+    Broker clientBroker;
+    Broker serverBroker;
+    Client client;
+    ClientProxy cProxy;
+    ServerProxy sProxy;
+    client.query(x);
+    cProxy.proxyToBroker(client.sendToProxy(cProxy), clientBroker);
+    clientBroker.sendToBroker(serverBroker, clientBroker.getString());
+    serverBroker.brokerToProxy(sProxy);
+    serverBroker.sendToBroker(clientBroker, serverBroker.getString());
+    clientBroker.brokerToProxy(cProxy);
+    std::cout<<"Result:"<<client.getResult()<<std::endl;
+}
     
+    //prints values during each step
 
     //sending client data to proxy which marshalls data
     //and sends it to the client broker
@@ -76,21 +100,3 @@ int main(int argc, const char * argv[])
 //    std::cout<<"ANSWER:"<<client.getResult();
 //**********
     
-    return 0;
-}
-
-/*
-1. broker starts
-2. server starts and sends registration to broker
-3. broker receives and registers server
-
-4. client starts and invokes func on server via client proxy
-5. client proxy takes data and marshals data
-6. client proxy transmits data to broker
-7. broker forwards data to server proxy
-8. server proxy demarshalls data and calls func on server
-9. server sends answer to server proxy
-10. server proxy marshals data and sends to broker
-11. broker forwards data to client proxy
-12. client proxy demarshalls data and sends to client. 
-*/

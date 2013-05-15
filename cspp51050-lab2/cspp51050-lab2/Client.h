@@ -12,6 +12,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <cstdarg>
 #include "ClientProxy.h"
 
 class Client{
@@ -23,10 +24,22 @@ private:
     std::string clientAddr;
 public:
     Client();
-    bool setCallName(long);
-    void setResult(std::string);
+    
+    //create separate constructor for each server function call
+    long query(int,int);
+    long query(std::string);
+
     CallMessage sendToProxy(ClientProxy);
+    void setCallName(std::string);
+    void setParamOne(std::string);
+    void setParamTwo(std::string);
+    void setResult(std::string);
+    std::string getCallName();
+    std::string getParamOne();
+    std::string getParamTwo();
     std::string getResult();
+    
+//    void getInput(int num, ...);
 };
 
 #endif /* defined(__cspp51050_lab2__Client__) */
