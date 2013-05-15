@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2CCC1210173C831600857E89 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC120F173C831600857E89 /* main.cpp */; };
 		2CCC1212173C831600857E89 /* cspp51050_lab2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCC1211173C831600857E89 /* cspp51050_lab2.1 */; };
+		2CCC121A173CAC3A00857E89 /* ClientProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC1218173CAC3900857E89 /* ClientProxy.cpp */; };
+		2CCC121D173CAC4300857E89 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC121B173CAC4300857E89 /* Client.cpp */; };
+		2CCC1220173CAC4900857E89 /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC121E173CAC4900857E89 /* Server.cpp */; };
+		2CCC1223173CAC4F00857E89 /* ServerProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC1221173CAC4F00857E89 /* ServerProxy.cpp */; };
+		2CCC1226173CAC5600857E89 /* Broker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC1224173CAC5600857E89 /* Broker.cpp */; };
+		2CCC12441741843500857E89 /* CallMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC12421741843500857E89 /* CallMessage.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +31,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C37828E174322E70088C81D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2CCC120C173C831600857E89 /* cspp51050-lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "cspp51050-lab2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCC120F173C831600857E89 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2CCC1211173C831600857E89 /* cspp51050_lab2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cspp51050_lab2.1; sourceTree = "<group>"; };
+		2CCC1218173CAC3900857E89 /* ClientProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientProxy.cpp; sourceTree = "<group>"; };
+		2CCC1219173CAC3A00857E89 /* ClientProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientProxy.h; sourceTree = "<group>"; };
+		2CCC121B173CAC4300857E89 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		2CCC121C173CAC4300857E89 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		2CCC121E173CAC4900857E89 /* Server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Server.cpp; sourceTree = "<group>"; };
+		2CCC121F173CAC4900857E89 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		2CCC1221173CAC4F00857E89 /* ServerProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServerProxy.cpp; sourceTree = "<group>"; };
+		2CCC1222173CAC4F00857E89 /* ServerProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerProxy.h; sourceTree = "<group>"; };
+		2CCC1224173CAC5600857E89 /* Broker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Broker.cpp; sourceTree = "<group>"; };
+		2CCC1225173CAC5600857E89 /* Broker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broker.h; sourceTree = "<group>"; };
+		2CCC12421741843500857E89 /* CallMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CallMessage.cpp; sourceTree = "<group>"; };
+		2CCC12431741843500857E89 /* CallMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallMessage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +79,21 @@
 		2CCC120E173C831600857E89 /* cspp51050-lab2 */ = {
 			isa = PBXGroup;
 			children = (
-				2CCC120F173C831600857E89 /* main.cpp */,
+				2CCC1224173CAC5600857E89 /* Broker.cpp */,
+				2CCC1225173CAC5600857E89 /* Broker.h */,
+				2CCC12421741843500857E89 /* CallMessage.cpp */,
+				2CCC12431741843500857E89 /* CallMessage.h */,
+				2CCC121B173CAC4300857E89 /* Client.cpp */,
+				2CCC121C173CAC4300857E89 /* Client.h */,
+				2CCC1218173CAC3900857E89 /* ClientProxy.cpp */,
+				2CCC1219173CAC3A00857E89 /* ClientProxy.h */,
 				2CCC1211173C831600857E89 /* cspp51050_lab2.1 */,
+				2CCC120F173C831600857E89 /* main.cpp */,
+				2CCC121E173CAC4900857E89 /* Server.cpp */,
+				2CCC121F173CAC4900857E89 /* Server.h */,
+				2CCC1221173CAC4F00857E89 /* ServerProxy.cpp */,
+				2CCC1222173CAC4F00857E89 /* ServerProxy.h */,
+				2C37828E174322E70088C81D /* README */,
 			);
 			path = "cspp51050-lab2";
 			sourceTree = "<group>";
@@ -118,6 +150,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCC1210173C831600857E89 /* main.cpp in Sources */,
+				2CCC121A173CAC3A00857E89 /* ClientProxy.cpp in Sources */,
+				2CCC121D173CAC4300857E89 /* Client.cpp in Sources */,
+				2CCC1220173CAC4900857E89 /* Server.cpp in Sources */,
+				2CCC1223173CAC4F00857E89 /* ServerProxy.cpp in Sources */,
+				2CCC1226173CAC5600857E89 /* Broker.cpp in Sources */,
+				2CCC12441741843500857E89 /* CallMessage.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +252,7 @@
 				2CCC1217173C831600857E89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

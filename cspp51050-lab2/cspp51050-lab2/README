@@ -1,0 +1,31 @@
+Two ways of doing this:
+1. c way: in main, initialize (client, server) //that runs all other functions
+    and run clientquery(function name, args)
+    
+2. c++ way: run everything in client so the queries are run via a client member function. i.e.:
+        decl slient
+        decl serve
+        client.connect(server)
+        client.query(server, fun, args) //decide whether this returns value
+                                        //or manually call a get function
+        
+    (are you the client or are you someone manipulating the client/server?)
+    
+    
+    
+is the user interacting through the console?
+or is the user another programmer who will be entering calls in the driver?
+
+
+
+
+while (1)
+    ask for input
+    if (input type == 2 ints)
+        call server w add
+    else if (input type == str)
+        call server w strength
+    else
+        bad input
+    return value to user (by print)
+    ask if user wants to input again. 
